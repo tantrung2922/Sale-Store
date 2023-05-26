@@ -1,0 +1,81 @@
+<div class="container-fluid" style="padding: 0px;">
+    <img src="FAQHeader.jpg" alt="" srcset="" style="width: 100%;">
+
+    <div class="row" style="margin: 0px;">
+        <nav class="navbar">
+            <div class="container-fluid" style=" border-bottom: 2px solid
+                rgb(169, 166, 166);
+                margin: 10px 30px 0px 30px;">
+                <h1 style="
+                    font-size: 50px;
+                    font-weight: bold;
+                    font-style: italic;">Other</h1>
+                <form class="d-flex" action="/productList/searchOther"
+                    method="get"
+                    autocomplete="off">
+                    <input class="form-control me-2" type="search"
+                        placeholder="Search"
+                        aria-label="Search" name="searchName">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </div>
+    <h5 style="margin-left: 30px;">Search Results: {{ numResults }}</h5>
+    {{#each otherProduct}}
+    <div class="row" style="margin: 30px;border-bottom: 1px solid rgb(156, 154,
+        154); padding: 10px;">
+        <div class="col-sm-4">
+            <img src="{{this.image}}" alt="" height="200px">
+        </div>
+        <div class="col-sm-8">
+            <h1
+                style="color: #b20e04;
+                font-size: 40px;
+                font-weight: bold;">{{this.name}}</h1>
+            <table class="table table-striped" style="text-align: center;">
+                <thead>
+                    <tr class="header table-secondary">
+                        <th scope="col">LENGTH</th>
+                        <th scope="col">WIDTH</th>
+                        <th scope="col">HEIGHT</th>
+                        <th scope="col">COUNTRY</th>
+                        <th scope="col">PRICE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{this.length}}cm</td>
+                        <td>{{this.width}}cm</td>
+                        <td>{{this.height}}cm</td>
+                        <td>{{this.country}}</td>
+                        <td>${{this.price}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div style=" display: flex;
+                justify-content: end;">
+                <a href="/productList/detail{{this._id}}"
+                    class="btn
+                    btn-danger">Learn More</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="table table-striped">
+
+    </div>
+    {{/each}}
+    <footer>
+        <div class="mb-3">
+            <img src="banner.jpg" class="card-img-top" alt="...">
+            <div class="card-body" style="margin: 10px;">
+                <h5 class="card-title">Germany</h5>
+                <p class="card-text">The foundation for everything we do is an
+                    unswerving commitment
+                    to excellence.</p>
+            </div>
+        </div>
+    </footer>
+</div>

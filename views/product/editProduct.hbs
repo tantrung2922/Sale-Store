@@ -1,0 +1,167 @@
+<link rel="stylesheet" href="/public/css/style.css">
+
+<div class="container">
+    <h2 style="margin: 100px 0px 30px 0px;">Update Product</h2>
+    <form class="register" action="/managerProduct/updateProduct" method="POST"
+        style="
+        border: 1px solid black;
+        border-radius: 15px;
+        padding: 20px;
+        margin-bottom: 50px;">
+        <input type="hidden" name="id" value="{{productUpdate._id}}">
+        <div class="card row" style="width: 100%; flex-direction: row;
+            margin-bottom: 30px;">
+            <div style="display: flex; justify-content: center;">
+                <img src="{{productUpdate.avataProduct}}"
+                    alt="{{productUpdate.name}}"
+                    name="image"
+                    style="width: auto; height: 250px;">
+            </div>
+
+            <h2 style="font-size: 25px; border-bottom: 1px solid rgb(205, 203,
+                203);
+                margin-bottom: 20px;
+                font-weight: bold; background-color: rgb(197, 196, 196);">Images
+                Product</h2>
+            {{!-- <div class="mb-3 col-sm-6">
+                <label for="image" class="form-label">Product Image</label>
+                <input type="file" class="form-control" name="image"
+                    value="{{productUpdate.image}}">
+            </div>
+            <div class="mb-3 col-sm-6">
+                <label for="name" class="form-label">Product Name</label>
+                <input type="text" class="form-control" id="name" name="name"
+                    value="{{productUpdate.name}}">
+            </div>
+            <div class="mb-3 col-sm-6">
+                <label for="price" class="form-label">Product Price</label>
+                <input type="text" class="form-control" name="price"
+                    value="{{productUpdate.price}}">
+            </div>
+            <div class="mb-3 col-sm-6">
+                <label for="quantity" class="form-label">Product Quantity</label>
+                <input type="number" class="form-control" name="quantity"
+                    value="{{productUpdate.quantity}}">
+            </div> --}}
+
+            <div class="mb-3 col-sm-6">
+                <label for="avataProduct" class="form-label">Product Avatar</label>
+                <input type="file" class="form-control" name="avataProduct"
+                    value="{{productUpdate.avataProduct}}" placeholder="{{productUpdate.avataProduct}}">
+            </div>
+            <div class="mb-3 col-sm-6">
+                <label for="image" class="form-label">Product Image</label>
+                <input type="file" class="form-control" name="image"
+                    value="{{productUpdate.image}}">
+            </div>
+
+            <div class="mb-3 col-sm-6">
+                <label for="image2" class="form-label">Product Image 2</label>
+                <input type="file" class="form-control" name="image2"
+                    value="{{productUpdate.image2}}">
+            </div>
+
+            <div class="mb-3 col-sm-6">
+                <label for="image3" class="form-label">Product Image 3</label>
+                <input type="file" class="form-control" name="image3"
+                    value="{{productUpdate.image3}}">
+            </div>
+        </div>
+
+        <div class="card row" style="width: 100%; flex-direction: row;
+            margin-bottom: 30px;">
+            <h2 style="font-size: 25px; border-bottom: 1px solid rgb(205, 203,
+                203);
+                margin-bottom: 20px;
+                font-weight: bold; background-color: rgb(197, 196, 196);">Infomation
+                Product</h2>
+            <div class="mb-3 col-sm-6">
+                <label for="name" class="form-label">Product Name</label>
+                <input type="text" class="form-control" name="name"
+                value="{{productUpdate.name}}">
+            </div>
+            <div class="mb-3 col-sm-6">
+                <label for="price" class="form-label">Product Price</label>
+                <input type="text" class="form-control" name="price"
+                value="{{productUpdate.price}}">
+            </div>
+            <div class="mb-3 col-sm-6">
+                <label for="quantity" class="form-label">Product Quantity</label>
+                <input type="number" class="form-control" name="quantity"
+                value="{{productUpdate.quantity}}">
+            </div>
+            <div class="mb-3 col-sm-6">
+                <label for="height" class="form-label">Height</label>
+                <input type="text" class="form-control" name="height"
+                value="{{productUpdate.height}}">
+            </div>
+            <div class="mb-3 col-sm-6">
+                <label for="width" class="form-label">Width</label>
+                <input type="text" class="form-control" name="width"
+                value="{{productUpdate.width}}">
+            </div>
+            <div class="mb-3 col-sm-6">
+                <label for="length" class="form-label">Lenght</label>
+                <input type="text" class="form-control" name="length"
+                value="{{productUpdate.length}}">
+            </div>
+            <div class="mb-3 col-sm-6">
+                <label for="weight" class="form-label">Weight</label>
+                <input type="text" class="form-control" name="weight"
+                value="{{productUpdate.weight}}">
+            </div>
+
+            <div class="mb-3 col-sm-6">
+                <label for="color" class="form-label">Product Color</label>
+                <input type="text" class="form-control" name="color"
+                value="{{productUpdate.color}}">
+            </div>
+
+        </div>
+
+        <div class="card row" style="width: 100%; flex-direction: row;
+            margin-bottom: 30px;">
+            <h2 style="font-size: 25px; border-bottom: 1px solid rgb(205, 203,
+                203);
+                margin-bottom: 20px;
+                font-weight: bold; background-color: rgb(197, 196, 196);">Other
+                Info</h2>
+            <div class="mb-3 col-sm-6">
+                <label for="type" class="form-label">Type</label>
+                <select class="form-select" name="type" aria-label="Default
+                    select example"
+                    value="{{productUpdate.type}}">
+                    <option selected>Choose Product Type</option>
+                    <option value="rifle">Rifles</option>
+                    <option value="pistol">Pistols</option>
+                    <option value="other">other</option>
+                </select>
+            </div>
+
+            <div class="mb-3 col-sm-6">
+                <label for="country" class="form-label">Country</label>
+                <input type="text" class="form-control" name="country"
+                value="{{productUpdate.country}}">
+            </div>
+            <div class="mb-3 col-sm-6">
+                <label for="companyName" class="form-label">Company</label>
+                <input type="text" class="form-control" name="companyName"
+                value="{{productUpdate.companyName}}">
+            </div>
+
+            <div class="mb-3 col-sm-6">
+                <label for="typeBullet" class="form-label">Type Bullet</label>
+                <input type="text" class="form-control" name="typeBullet"
+                value="{{productUpdate.typeBullet}}">
+            </div>
+        </div>
+
+
+        <div style="color: red;">
+            {{alert}}
+        </div>
+        <button style="width: 100%; margin: 20px 0px 10px 0px" type="submit"
+            class="btn btn-dark">Update Product</button>
+    </form>
+
+</div>

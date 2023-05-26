@@ -1,0 +1,76 @@
+* {
+  font-family: "Play", sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+.logo {
+  padding: 5px 10px;
+  width: 100px;
+}
+
+.collapse {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+ul.navbar-nav {
+  margin-right: 30px;
+}
+
+form.d-flex {
+  margin-left: 70px;
+}
+
+li p {
+  margin: 0px 15px 0px 15px;
+  font-size: 30px;
+}
+
+/* Style for the form container */
+form.register {
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+/* Style for each input field container */
+.mb-3 {
+  flex-basis: calc(
+    50% - 10px
+  ); /* Set the width of each input field container to 50% minus 10px for margin */
+  margin-bottom: 20px;
+}
+
+/* Style for each label element */
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Style for each input element */
+input {
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Style for the select box */
+select {
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Bỏ dấu chấm cho thẻ <li> */

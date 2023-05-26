@@ -1,0 +1,77 @@
+
+<div class="container">
+    <h2 style="margin: 100px 0px 30px 0px;">Update User</h2>
+    <form class="register" action="/managerUser/updateUser" method="POST"
+        style="
+        border: 1px solid black;
+        border-radius: 15px;
+        padding: 20px;">
+        <input type="hidden" name="id" value="{{userUpdate._id}}">
+        <div class="mb-3">
+            <label for="userName" class="form-label">User Name</label>
+            <input type="text" class="form-control" name="userName"
+                value="{{userUpdate.userName}}">
+        </div>
+        <div class="mb-3">
+            <label for="fullName" class="form-label">Full Name</label>
+            <input type="text" class="form-control" name="fullName"
+                value="{{userUpdate.fullName}}">
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" name="password"
+                value="{{userUpdate.password}}">
+        </div>
+        <div class="mb-3">
+            <label for="rePassword" class="form-label">Confirm Password</label>
+            <input type="password" class="form-control" name="rePassword"
+                value="{{userUpdate.password}}">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" name="email"
+                value="{{userUpdate.email}}">
+        </div>
+        <div class="mb-3">
+            <label for="phoneNumber" class="form-label">Phone Number</label>
+            <input type="number" class="form-control" name="phoneNumber"
+                value="{{userUpdate.phoneNumber}}">
+        </div>
+        <div class="mb-3">
+            <label for="gender">Gender:</label>
+            <select name="gender" style="padding: 9px 0px ;"
+                value="{{userUpdate.gender}}">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="birthday" class="form-label">Birthday</label>
+            <input type="date" class="form-control" name="birthday"
+                value="{{userUpdate.birthday}}">
+        </div>
+        <div class="mb-3">
+            <label for="address" class="form-label">Address</label>
+            <input type="text" class="form-control" name="address"
+                value="{{userUpdate.address}}">
+        </div>
+        <div class="mb-3">
+            <label for="country" class="form-label">Country</label>
+            <input type="text" class="form-control" name="country"
+                value="{{userUpdate.country}}">
+        </div>
+
+        <div class="mb-3" style="width: 100%;">
+            <label for="birthday" class="form-label">Avatar</label>
+            <input type="file" class="form-control" name="avatar"
+                value="{{userUpdate.avatar}}">
+        </div>
+        <div style="color: red;">
+            {{alert}}
+        </div>
+        <button style="width: 100%; margin: 20px 0px 10px 0px" type="submit"
+            class="btn btn-dark">Update User</button>
+    </form>
+
+</div>
